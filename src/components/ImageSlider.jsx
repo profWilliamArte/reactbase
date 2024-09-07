@@ -1,55 +1,46 @@
-
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ImageSlider = () => {
   const images = [
-    '/fondo/carro01.jpg',
-    '/fondo/carro02.jpg',
-    '/fondo/carro03.jpg',
-    '/fondo/carro01.jpg',
-    '/fondo/carro02.jpg',
+    'src/assets/fondo/carro01.jpg',
+    'src/assets/fondo/carro02.jpg',
+    'src/assets/fondo/carro03.jpg',
   ];
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 5, // Cambia este valor para mostrar más o menos imágenes
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
+    speed: 2000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
   };
 
   return (
-    <div className="container-fluid p-0">
-    <Slider {...settings}>
-      {images.map((image, index) => (
-        <div key={index} style={{ padding: '10px' }}>
-          <img 
-            src={image} 
-            alt={`Imagen ${index}`} 
-            style={{ width: '100%', height: 'auto', borderRadius: '8px', objectFit: 'cover' }} 
-          />
-        </div>
-      ))}
-    </Slider>
-  </div>
+    <div className="container-fluid p-0">  
+      <div className="slider-container">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index} style={{ padding: '0 5px' }}> {/* Ajusta el padding aquí */}
+              <img 
+                src={image} 
+                alt={`Imagen ${index}`} 
+                style={{ 
+                  width: '100%', // Cambia a '100%' para que ocupe todo el espacio disponible
+                  borderRadius: '8px', // Puedes agregar un borde redondeado si lo deseas
+                  padding: '0 5px', // Ajusta el padding aquí
+                }} 
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>  
+    </div>
   );
 };
 
 export default ImageSlider;
-
-{/* 
-  
-  <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt={`Imagen ${index}`} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
-          </div>
-        ))}
-      </Slider>
-  */}
-

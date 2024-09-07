@@ -23,6 +23,7 @@ import SumayPromedio from "./pages/(basicos)/SumayPromedio"
 import Cargarimg from "./pages/(imagenes)/Cargarimg"
 
 import Mostrarslider from "./pages/(imagenes)/Mostrarslider"
+import Dialogos from "./pages/(otros)/Dialogos"
 
 
 
@@ -58,6 +59,9 @@ const App = () => {
         <Route path="/formulario2" element={<Formulario2/>} />
         <Route path="/formulario3" element={<Formulario3/>} />
         <Route path="/formulario4" element={<FormularioContacto/>} />
+
+
+        <Route path="/dialogos" element={<Dialogos/>} />
 
         <Route path="*" element={<Inicio/>} />
       </Routes>

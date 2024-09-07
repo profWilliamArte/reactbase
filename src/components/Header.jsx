@@ -64,6 +64,26 @@ const Header = () => {
                               
                             </ul>
                         </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Miselaneos
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li><Link to ="/dialogos" className="dropdown-item" href="#">Dialogos</Link></li>
+                                
+                              
+                            </ul>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Apis
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li><Link to ="/dialogos" className="dropdown-item" href="#">Lista de Nombre</Link></li>
+                                
+                              
+                            </ul>
+                        </li>
                        
                     </ul>
                 </div>

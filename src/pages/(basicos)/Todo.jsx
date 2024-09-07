@@ -18,8 +18,14 @@ const Todo = () => {
         setInput("");
       };
 
-      const removeTodo = (id) =>
-        setTodos((todos) => todos.filter((t) => t.id !== id));
+      const removeTodo = (id) => {
+        const confirmar= confirm("¿Estas seguro de que deseas Eliminar?");
+        if (confirmar){
+          setTodos((todos) => todos.filter((t) => t.id !== id));
+        }
+       
+      }
+        
   return (
     <div className="container">
         <h1 className="text-center my-5">Todo</h1>
