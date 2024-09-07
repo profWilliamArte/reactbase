@@ -1,12 +1,14 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import b1 from '../assets/fondo/carro01.jpg';
+import b2 from '../assets/fondo/carro02.jpg';
+import b3 from '../assets/fondo/carro03.jpg';
 const ImageSlider = () => {
   const images = [
-    'src/assets/fondo/carro01.jpg',
-    'src/assets/fondo/carro02.jpg',
-    'src/assets/fondo/carro03.jpg',
+    b1, // Usando la imagen importada
+    b2, // Usando la imagen importada
+    b3, // Usando la imagen importada
   ];
 
   const settings = {
