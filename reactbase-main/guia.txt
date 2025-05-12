@@ -1,0 +1,3 @@
+https://www.youtube.com/@coderyan/videos
+
+cuando no corre el npm run dev desde ps
